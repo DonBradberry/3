@@ -1,0 +1,15 @@
+class StringLengthComparer : IComparer<string>
+{
+    public int Compare(string x, string y)
+    {
+        return x.Length.CompareTo(y.Length);
+    }
+}
+
+string[] words = { "apple", "banana", "orange", "kiwi", "grapefruit" };
+Array.Sort(words, new StringLengthComparer());
+
+foreach (string word in words)
+{
+    Console.WriteLine(word);
+}
